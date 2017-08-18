@@ -1,0 +1,1650 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css"> 
+		<link type="text/css" rel="stylesheet" href="css/home.css">    
+		<link type="text/css" rel="stylesheet" href="css/menu.css">
+		<link type="text/css" rel="stylesheet" href="css/slider.css">
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css"> 
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" data-library="jquery" data-version="1.11.3"></script>
+	    <link rel="stylesheet" href="build/css/intlTelInput.css">
+	    <script src="build/js/intlTelInput.js"></script>	
+		<script>
+			$(document).ready(function(){
+			  $('.slider_company').bxSlider({
+				slideWidth: 200,
+				minSlides: 2,
+				maxSlides: 3,
+				slideMargin: 10
+			  });
+			});
+		</script>
+		<script>
+			var myIndex = 0;
+			carousel();
+
+			function carousel() {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				for (i = 0; i < x.length; i++) {
+				   x[i].style.display = "none";  
+				}
+				myIndex++;
+				if (myIndex > x.length) {myIndex = 1}    
+				x[myIndex-1].style.display = "block";  
+				setTimeout(carousel, 2000); // Change image every 2 seconds
+			}
+		</script>
+
+		<script>
+			$(window).scroll(function(e){ 
+			  var $el = $('.header_logo'); 
+			  var isPositionFixed = ($el.css('position') == 'fixed');
+			  if ($(this).scrollTop() > 50 && !isPositionFixed){ 
+				$('.header_logo').css({'position': 'fixed', 'top': '0px'});
+				$('#menu').addClass('posFixd');
+				$('#menu li ul').css({'top':'5.8em'});
+				$('#menu').css({'top':'5.8em'});
+			  }
+			  if ($(this).scrollTop() < 50 && isPositionFixed)
+			  {
+				$('.header_logo').css({'position': 'static', 'top': '0px'});
+				$('#menu').removeClass('posFixd');
+				$('#menu li ul').css({'top':'8.5em'});
+				$('#menu').css({'top':'8.5em'});
+			  } 
+			});
+			
+	function isElementInViewport(elem) {
+    var $elem = $('#company_slider');
+
+    // Get the scroll position of the page.
+    var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
+    var viewportTop = $(scrollElem).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+
+    // Get the position of the element on the page.
+    var elemTop = Math.round( $elem.offset().top-800 );
+    var elemBottom = elemTop + $elem.height();
+
+    return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
+}		
+			
+			// Check if it's time to start the animation.
+			function checkAnimation() {
+				var $elem = $('#company_slider');
+
+				if (isElementInViewport($elem)) {
+					$('#menu').addClass('posFixd');
+				}else{
+				$('#menu').removeClass('posFixd');
+				}
+			}
+
+			// Capture scroll events
+			$(window).scroll(function(){
+				checkAnimation();
+			});
+			
+		</script>
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+		<link href="css/thumbs2.css" rel="stylesheet" />
+		<link href="css/thumbnail-slider.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<script src="js/thumbnail-slider.js" type="text/javascript"></script>
+		<style>
+			header {display:block; font-size:1.2em; margin-bottom:100px;}
+			header a, header span {
+				display: inline-block;
+				padding: 4px 8px;
+				margin-right: 10px;
+				border: 2px solid #000;
+				background: #DDD;
+				color: #000;
+				text-decoration: none;
+				text-align: center;
+				height: 150px;
+			}
+			header span {background:white;}
+			a {color: #1155CC;}
+		</style>
+		<style>
+			@keyframes slidy {
+			0% { left: 0%; }
+			20% { left: 0%; }
+			25% { left: -100%; }
+			45% { left: -100%; }
+			50% { left: -200%; }
+			70% { left: -200%; }
+			75% { left: -300%; }
+			95% { left: -300%; }
+			100% { left: -400%; }
+			}
+
+			body { margin: 0; } 
+			div#slider { overflow: hidden; }
+			div#slider figure img { width: 20%; float: right; }
+			div#slider figure { 
+			  position: relative;
+			  width: 500%;
+			  margin: 0;
+			  right: 0;
+			  text-align: left;
+			  font-size: 0;
+			  animation: 30s slidy infinite; 
+			}
+
+		</style>
+	</head>
+	<body class="home_body">
+		<div class="parent_body">
+			<!---------------------------------------- Header Menu ------------------------------->
+			<div class="header_menu">
+				<div class="content_wrap" style="width:1349px !important;margin:0 auto !important;">
+					<table class="left_menu">
+						<tr>
+							<td><a href="cardPage.html">For Buyers</a></td>
+							<td><a href="cardPage.html">For Sellers</a></td>
+							<td><a href="cardPage.html">By Country</a></td>
+							<td><a href="cardPage.html">Membership Plan</a></td>
+							<td style="border:none;"><a href="cardPage.html">Contact Us</a></td>
+					</table>
+					<div class="spacer"></div>
+					<table class="right_menu">
+						<tr>
+							<td><a href="cardPage.html">Join Free</a></td>
+							<td style="border:none;"><a href="cardPage.html">Sign In</a></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!---------------------------------------- Search Box and Logo ------------------------------->
+			<div class="header_logo">
+				<div class="content_wrap" style="width:1349px !important;margin:0 auto !important;">
+					<div class="vertical_spacer"> </div>
+					<div class="logo">
+						<img src="images/logo.jpg" />
+					</div>
+					<div class="search_form">
+						<table class="head_form">
+							<tr>
+								<td>
+									<div class="search_box">
+										<input type="text" name="--Your Search Box Name Here--" placeholder="Your Placeholder Goes Here">
+										<button type="submit" name="--Submit Button Name--"><i class="fa fa-search" aria-hidden="true" style="color:white;"></i></button>
+									</div>
+								</td>
+								<td>
+									<div class="quote_button">
+										<button type="submit" name="--Your Quotes Button Name--">Post Buy Requirements</button>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		
+			<!---------------------------------------- Side Menu ------------------------------->
+		<div class="content clear" style="margin-top:20px;">
+			<div class="content_wrap" style="width:1349px !important;margin:0 auto !important;">
+				<div id="side_menu">
+					<ul id="menu" class="">
+						<li>
+							<a href="cardPage.html"><i class="fa fa-search"></i> &nbsp; Agriculture  <span class="fltRt">></span></a>
+							<ul>
+								<li>
+									<table class="menu_table">
+										<tr>
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+										<tr>
+									</table>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="cardPage.html"><i class="fa fa-search" aria-hidden="true"></i> &nbsp; Apparel & Fashion<span class="fltRt">></span></a>
+							<ul>
+								<li>
+									<table class="menu_table">
+										<tr>
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+										<tr>
+									</table>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="cardPage.html"><i class="fa fa-search" aria-hidden="true"></i> &nbsp; Auto & Automobile Accessories<span class="fltRt">></span></a>
+							<ul>
+								<li>
+									<table class="menu_table">
+										<tr>
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+										<tr>
+									</table>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="cardPage.html"><i class="fa fa-search" aria-hidden="true"></i> &nbsp; Ayurveda & Herbal<span class="fltRt">></span></a>
+							<ul>
+								<h4>Ayurveda & Herbal Manufacturers & Suppliers India</h4>
+							</ul>
+						</li>
+						<li>
+							<a href="cardPage.html"><i class="fa fa-search" aria-hidden="true"></i> &nbsp; Business & Professional Services<span class="fltRt">></span></a>
+							<ul>
+								<li>
+									<table class="menu_table">
+										<tr>
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+										<tr>
+									</table>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="cardPage.html"><i class="fa fa-search" aria-hidden="true"></i> &nbsp; Chemical Suppliers<span class="fltRt">></span></a>
+							<ul>
+								<li>
+									<table class="menu_table">
+										<tr>
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+										<tr>
+									</table>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="cardPage.html"><i class="fa fa-search" aria-hidden="true"></i> &nbsp; Computers and Internet<span class="fltRt">></span></a>
+							<ul>
+								<li>
+									<table class="menu_table">
+										<tr>
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+										<tr>
+									</table>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="cardPage.html"><i class="fa fa-search" aria-hidden="true"></i> &nbsp; Construction & Building Material<span class="fltRt">></span></a>
+							<ul>
+								<li>
+									<table class="menu_table">
+										<tr>
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+										<tr>
+									</table>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="cardPage.html"><i class="fa fa-search" aria-hidden="true"></i> &nbsp; Consumer Electronics<span class="fltRt">></span></a>
+							<ul>
+								<li>
+									<table class="menu_table">
+										<tr>
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+										<tr>
+									</table>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="cardPage.html"><i class="fa fa-search" aria-hidden="true"></i> &nbsp; Contractors & Freelancers<span class="fltRt">></span></a>
+							<ul>
+								<li>
+									<table class="menu_table">
+										<tr>
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+										<tr>
+									</table>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="cardPage.html"><i class="fa fa-search" aria-hidden="true"></i> &nbsp; Electronics & Electrical<span class="fltRt">></span></a>
+							<ul>
+								<li>
+									<table class="menu_table">
+										<tr>
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+										<tr>
+									</table>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="cardPage.html"><i class="fa fa-search" aria-hidden="true"></i> &nbsp; Environment<span class="fltRt">></span></a>
+							<ul>
+								<li>
+									<table class="menu_table">
+										<tr>
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+										<tr>
+									</table>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="cardPage.html"><i class="fa fa-search" aria-hidden="true"></i> &nbsp; Food Products & Beverage<span class="fltRt">></span></a>
+							<ul>
+								<li>
+									<table class="menu_table">
+										<tr>
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+											
+											<td>
+												<ol>
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+													
+													<h3> LED Lights & Bulbs</h3>
+													<li>LED Lights</li>
+													<li>LED Panel Lights</li>
+													<li>LED Downlights</li>
+													<li> Bulb Raw Materials</li>
+													<li> LED Drivers </li>
+													<li> LED Street Lights </li>
+													<li>LED Lamps</li><br>
+													
+													<h3> Syska LED Lights</h3><br>
+												</ol>
+											</td>
+										<tr>
+									</table>
+								</li>
+							</ul>
+						</li>
+						<li class="topBdr">
+							<a href="cardPage.html"><i class="fa fa-sdearch" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --See More sections--<span class="fltRt"></span></a>
+						</li>						
+					</ul>
+				</div>
+				<!---------------------------------------- Slider Menu ------------------------------->
+				<br><br>
+				<div class="slider" style="padding-right:20px;">
+					<div id="slider">
+						<figure>
+							<img src="images/img1.jpg">
+							<img src="images/im2.jpg">
+							<img src="images/img3.jpg">
+							<img src="images/img4.jpg">
+							<img src="images/img1.jpg">
+						</figure>
+					</div><br>
+					<div id="navigate">
+						<table>
+							<tr>
+								<td class="navTab navigate_div_Actv">
+									<div class="navigate_div">Div 1</div>
+								</td>
+								<td class="navTab">
+									<div class="navigate_div">Div 2</div>
+								</td>
+								<td class="navTab">
+									<div class="navigate_div">Div 3</div>
+								</td>
+								<td class="navTab">
+									<div class="navigate_div">Div 4</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				
+				<div class="items clear">
+					<table class="item_table">
+						<tr>
+							<td>
+								<table class="rest_image">
+									<tr>
+										<td colspan="2" valign="top" style="border-right:1px solid #dadada;">
+											<div class="link_image1"><a href="cardPage.html">
+												<p>Electrical Switches</p>
+												<img src="images/switch.jpg" />
+											</a></div>
+										</td>
+										<td>
+											<div class="link_image1"><a href="cardPage.html">
+												<p>Solar Street Lights</p>
+												<img src="images/light.png" />
+											</a></div>
+										</td>
+									</tr>
+								</table>
+								<table class="rest_image">
+									<tr>
+										<td style="width:33%;border-right:1px solid #dadada;border-top:1px solid #dadada;">
+											<div class="link_image3"><a href="cardPage.html">
+												<p>Air Cooler</p>
+												<img src="images/cooler.jpg" />
+											</a></div>
+										</td>
+										<td style="width:33%;border-right:1px solid #dadada;border-top:1px solid #dadada;">
+											<div class="link_image3"><a href="cardPage.html">
+												<p>Security Camera</p>
+												<img src="images/camera.jpg" />
+											</a></div>
+										</td>
+										<td style="width:33%;border-top:1px solid #dadada;">
+											<div class="link_image3"><a href="cardPage.html">
+												<p>Air Conditioner</p>
+												<img src="images/cooler.jpg" />
+											</a></div>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td style="border-left:1px solid #dadada;">
+								<div class="side_image"><a href="cardPage.html">
+									<img src="images/wm.jpg" />
+									<div id="imc"><h2>Washing Machines<br><hr>Abcdef Ghijkl</h2></div>
+								</a></div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				
+				<div class="items dn clear">
+					<table class="item_table">
+						<tr>
+							<td>
+								<table class="rest_image">
+									<tr>
+										<td colspan="2" valign="top" style="border-right:1px solid #dadada;">
+											<div class="link_image1"><a href="cardPage.html">
+												<p>Electrical Switches</p>
+												<img src="images/switch.jpg" />
+											</a></div>
+										</td>
+										<td>
+											<div class="link_image1"><a href="cardPage.html">
+												<p>Solar Street Lights</p>
+												<img src="images/light.png" />
+											</a></div>
+										</td>
+									</tr>
+								</table>
+								<table class="rest_image">
+									<tr>
+										<td style="width:33%;border-right:1px solid #dadada;border-top:1px solid #dadada;">
+											<div class="link_image3"><a href="cardPage.html">
+												<p>Air Cooler</p>
+												<img src="images/cooler.jpg" />
+											</a></div>
+										</td>
+										<td style="width:33%;border-right:1px solid #dadada;border-top:1px solid #dadada; ">
+											<div class="link_image3"><a href="cardPage.html">
+												<p>Air Conditioner</p>
+												<img src="images/cooler.jpg" />
+											</a></div>
+										</td>
+										<td style="width:33%;border-top:1px solid #dadada;">
+											<div class="link_image3"><a href="cardPage.html">
+												<p>Security Camera</p>
+												<img src="images/camera.jpg" />
+											</a></div>
+										</td>										
+									</tr>
+								</table>
+							</td>
+							<td style="border-left:1px solid #dadada;">
+								<div class="side_image"><a href="cardPage.html">
+									<img src="images/wm.jpg" />
+									<div id="imc"><h2>Washing Machines<br><hr>Abcdef Ghijkl</h2></div>
+								</a></div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				
+				<div class="items dn clear">
+					<table class="item_table">
+						<tr>
+							<td>
+								<table class="rest_image">
+									<tr>
+										<td colspan="2" valign="top" style="border-right:1px solid #dadada;">
+											<div class="link_image1"><a href="cardPage.html">
+												<p>Electrical Switches</p>
+												<img src="images/switch.jpg" />
+											</a></div>
+										</td>
+										<td>
+											<div class="link_image1"><a href="cardPage.html">
+												<p>Solar Street Lights</p>
+												<img src="images/light.png" />
+											</a></div>
+										</td>
+									</tr>
+								</table>
+								<table class="rest_image">
+									<tr>
+										<td style="width:33%;border-right:1px solid #dadada;border-top:1px solid #dadada;">
+											<div class="link_image3"><a href="cardPage.html">
+												<p>Air Cooler</p>
+												<img src="images/cooler.jpg" />
+											</a></div>
+										</td>
+										<td style="width:33%;border-right:1px solid #dadada;border-top:1px solid #dadada;">
+											<div class="link_image3"><a href="cardPage.html">
+												<p>Security Camera</p>
+												<img src="images/camera.jpg" />
+											</a></div>
+										</td>
+										<td style="width:33%;border-top:1px solid #dadada;">
+											<div class="link_image3"><a href="cardPage.html">
+												<p>Air Conditioner</p>
+												<img src="images/cooler.jpg" />
+											</a></div>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td style="border-left:1px solid #dadada;">
+								<div class="side_image"><a href="cardPage.html">
+									<img src="images/wm.jpg" />
+									<div id="imc"><h2>Washing Machines<br><hr>Abcdef Ghijkl</h2></div>
+								</a></div>
+							</td>
+						</tr>
+					</table>
+				</div>
+					
+					<center><div id="company_slider">
+						<h3 style="margin-bottom:30px;"> Featured Companies </h3>
+						<div id="thumbnail-slider">
+							<div class="inner">
+								<ul>
+									<li>
+										<img src="images/img1.jpg" /><br>
+									</li>
+									<li>
+										<img src="images/1.jpg" />
+									</li>
+									<li>
+										<img src="images/2.jpg" />
+									</li>
+									<li>
+										<img src="images/3.jpg" />
+									</li>
+									<li>
+										<img src="images/4.jpg" />
+									</li>
+									<li>
+										<img src="images/5.jpg" />
+									</li>
+									<li>
+										<img src="images/6.jpg" />
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div></center><br>
+					
+					<div id="company_slider">
+						<h3 style="margin-bottom:30px;"> Featured Companies </h3>
+						<div id="thumbnail-slider" style="border:20px solid #eeeeef;">
+							<div class="inner" style="background:#eeeeef;">
+								<div class="form_content" style="float:left;">
+									<table class="form_table">
+										<tr>
+											<td id="img_form" valign="top"> <img src="images/in.jpg"/> </td>
+											<td><input type="text" value="Abcdefghijkl" /></td>
+										</tr>
+									</table>
+								</div>
+								<div class="form_content" style="float:right;">
+									<input type="text" value="Abcdefghijkl" />
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+				</div><br><br>
+			</div>
+		</div>
+
+		<!--bottom form -->
+		<div class="formWrpr clear">
+			<div class="bigDiv fltLt">
+			<p>Post your Buy Requirement</p>
+			<input type="text" class="btmfrmInpt" placeholder="Product / Services you are looking for" />
+			<textarea type="text" style="width:100%;" class="btmfrmInpt" placeholder="Product / Services you are looking for" rows="4" cols="50"></textarea>
+			<ul class="fstInUl">
+				<li><input type="text" class="btmfrmInpt" placeholder="Product / Services " /></li>
+				<li><input type="text"  class="btmfrmInpt" placeholder="Product / Services " /></li>
+				<li><input type="text" class="btmfrmInpt" placeholder="Product / Services " /></li>
+			</ul>
+			<ul class="scndInUl">
+				<li><input type="text" class="btmfrmInpt" placeholder="Product / Services " /></li>
+				<li style="padding-top: 12px;" class="sugst"><input type="text" id="phone" class="btmfrmInpt" placeholder="Product / Services " /></li>
+			</ul>
+			<center><input type="submit" name="submit" class="btmFrmSubBtn" value="submit" /></center>
+			
+			
+			</div>
+			<div class="smlDiv fltLt"></div>
+		</div>
+				
+<!--footer-->				
+<div id="footer-section">
+        <div class="sub-nav ">
+          <div class="list-section" style="margin-left: 80px;">
+            <h3 class="title">ABOUT US</h3>
+            <div class="footer-list">
+              <ul>
+                <li><a href="cardPage.html" rel="nofollow">About Our Company</a></li>
+								<li><a href="cardPage.html" target="_blank">Jobs &amp; Careers</a></li> 
+                <li><a href="cardPage.html" rel="nofollow">Success Stories</a></li>
+                <li><a href="cardPage.html" rel="nofollow">Tradeindia In News</a></li>
+                <li><a href="cardPage.html" rel="nofollow">Contact Us</a></li>
+                <li><a href="cardPage.html" rel="nofollow">Trade Bodies</a></li>
+                <li><a href="cardPage.html" rel="nofollow">Site Map</a></li>
+                <li><a href="cardPage.html" rel="nofollow">Partner With Us</a></li>
+                <li><a href="cardPage.html" rel="nofollow">Send Feedback</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="list-section">
+            <h3 class="title">OUR  SERVICES</h3>
+            <div class="footer-list">
+              <ul>
+                <li><a href="cardPage.html" rel="nofollow">Advertise With Us</a></li>
+                <li><a href="cardPage.html" rel="nofollow">Book Domains</a></li>
+                <li><a href="cardPage.html" target="_blank" rel="nofollow">Weekly Newsletter</a></li>
+                <li><a href="cardPage.html" rel="nofollow">Order Credit Report</a></li>
+                <li><a href="cardPage.html" rel="nofollow">Compliance Management</a></li>
+                <li><a href="cardPage.html" rel="nofollow">Subscribe Trade Alerts</a></li>
+                <li><a href="cardPage.html" rel="nofollow">Tradeindia Rewards</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="list-section">
+            <h3 class="title">BUYERS SECTION</h3>
+            <div class="footer-list">
+              <ul>
+                <li><a href="cardPage.html" rel="nofollow">Browse Suppliers </a></li>
+                <li><a href="cardPage.html" rel="nofollow">Post Your Requirement</a></li>
+                <li><a href="cardPage.html" rel="nofollow">View Sell Trade Leads</a></li>
+              </ul>
+            </div>
+            
+<!-- Inquiry Messener App Button Start -->
+<div class="imaDownload" style="width:60%;">
+	<a href="cardPage.html">
+	<img src="images/andriod-app-store.png" alt="Tradeindia App" style="margin:5px 0px 0px 0px;">
+	</a>
+</div>
+<div class="imaDownload" style="width:60%;">
+	<a href="cardPage.html" target="_blank">
+	<img class="imgl" src="images/ios-app-store.png" alt="Tradeindia IOS App" style="margin:5px 0px 0px 0px;">
+	</a>
+</div>
+				<div class="imaDownload" style="width:60%;"><a href="cardPage.html" target="_blank"><img src="images/mobile-site.png" alt="Tradeindia Mobile Site" style="margin:5px 0px 0px 0px;"></a></div>	
+				
+				<!-- Inquiry Messener App Button End --> 
+  </div>
+  <div class="list-section">
+	<h3 class="title">SELLERS SECTION</h3>
+	<div class="footer-list">
+	  <ul>
+		<li><a href="cardPage.html" rel="nofollow">Display New Products</a></li>
+		<li><a href="cardPage.html" rel="nofollow">Post Sell Trade Leads</a></li>
+		<li><a href="cardPage.html" rel="nofollow">Get Freight Quotes</a></li>
+		<li><a href="cardPage.html" rel="nofollow">Get Packers &amp; Movers Quotes</a></li>
+	  </ul>
+	</div>
+  </div>
+  <div class="list-section">
+	<h3 class="title">DIRECTORY </h3>
+	<div class="footer-list">
+	  <ul>
+		<li><a href="cardPage.html">Manufacturers</a></li>
+		<li><a href="cardPage.html">Suppliers</a></li>
+		<li><a href="cardPage.html">Business Services</a></li>
+		<li><a href="cardPage.html">Online Catalogs</a></li>
+		<li><a href="cardPage.html">Buyers</a></li>
+	  </ul>
+	</div>
+  </div>
+  <div class="clr"></div>
+</div>
+
+<div class="grey-bg"></div>
+
+<div class="footerBtm clear">
+	<div class="leftF fltLt"><img src="images/logo.jpg"></div>
+	<div class="centF fltLt">
+	<p>India's Largest B2B Marketplace, Connecting Buyers and Sellers.</p>
+	<small><p><i>Infocom Network Limited. All rights reserved.</i><span style="color:blue;">Terms of Use | Privacy Policy</span></p></small>
+	</div>
+	<div class="rigtF fltLt">
+	<p><b>Follow Us</b></p>
+	<i class="fa fa-facebook" ></i>
+	<i class="fa fa-youtube" ></i>
+	<i class="fa fa-twitter" ></i>
+	<i class="fa fa-google" ></i>
+	</div>
+</div>
+</div>
+<br>					
+</body>
+
+<script>
+$('.navTab').click(function(){
+	var navTab = $('.navTab');
+	navTab.removeClass('navigate_div_Actv');
+	$(this).addClass('navigate_div_Actv');
+	var divIndex = $(this).index();
+	$('.items').hide();
+	$('.items').eq(divIndex).fadeIn();
+	});
+</script>	
+<script>
+   $("#phone").intlTelInput({
+   preferredCountries: ['cn', 'jp'],
+  utilsScript: "build/js/utils.js"
+});
+</script>
+</html>

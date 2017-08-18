@@ -1,0 +1,78 @@
+.menu_page a
+{
+	width:100%;
+	color:grey;
+}
+.menu_page a:hover
+{
+	color:grey;
+}
+.menu_page h1
+{
+	text-align:center;
+	color:#da251c;
+	text-shadow: 1px 1px 1px #b2b2b2;
+	font: 50px "Times New Roman", Times, serif;
+}
+.page_navigation
+{
+	text-align:left;
+	font-weight:bold;
+	padding:20px;
+	width:80%;
+	background:white;
+	box-shadow:1px 1px 1px #b2b2b2;
+}
+.menu_detail
+{
+	width:80%;
+	float:center;
+}
+.menu_detail td
+{
+	padding-top:50px;
+}
+.content_holder
+{
+	background:white;
+	width:315px;
+	box-shadow:1px 1px 1px #b2b2b2;
+}
+.content_image
+{
+	height:255px;
+}
+.content_text
+{
+	padding-left:10px;
+	color:grey;
+}
+.content_text a
+{
+	color:grey;
+	font-size:19px;
+	font-weight:bold;
+	text-align:center;
+}
+.content_text ul
+{
+	padding-bottom:10px;
+}
+.content_text ul li a
+{
+	padding-top:10px;
+	color:blue;
+	font-size:15px;
+	text-align:left;
+	font-weight:normal;
+}
+.content_text a:hover
+{
+	color:grey;
+}
+.content_image img
+{
+	width:295px;
+	height:255px;
+	padding:10px;
+}

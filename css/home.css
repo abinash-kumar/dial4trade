@@ -1,0 +1,333 @@
+body
+{
+
+}
+.home_body
+{
+	margin:0;
+	padding:0;
+	background:#f3f3f3;
+}
+.content_wrap
+{
+	width:1349px !important;
+	margin:0 auto !important;
+}
+.parent_body
+{
+	width:100%;
+	height:auto;
+}
+.header_menu
+{
+	position: static;
+	background:#f3f3f3;
+	height:40px;
+	border-bottom:1px solid #d9d9d9;
+}	
+.header_menu a
+{
+	color:#6c6c6c;
+	text-decoration:none;
+}
+.spacer
+{
+	width:200px;
+}
+.left_menu
+{
+	float:left;
+	height:100%;
+	padding-left:50px;
+}
+.no-border
+{
+	border-right:0px;
+}
+.left_menu td
+{
+	border-right:1px solid #d9d9d9;
+	padding-left:20px;
+	padding-right:20px;
+}
+.right_menu
+{
+	float:right;
+	height:100%;
+	padding-right:50px;
+}
+.right_menu td
+{
+	border-right:1px solid #d9d9d9;
+	padding-left:20px;
+	padding-right:20px;
+}
+.vertical_spacer
+{
+	height:15px;
+	background:white;
+}
+.header_logo
+{
+	width:100%;
+	height:85px;
+	background:white;
+	z-index: 10;
+	box-shadow:0 1px 8px 2px #d4d0d0;
+}
+.logo
+{
+	float:left;
+	padding-left:50px;
+}
+.search_form
+{
+	float:right;
+	padding-right:200px;
+}
+.search_box
+{
+	width:480px;
+	border-radius:3px;
+	border:2px solid #000;
+	margin:0;
+	padding:0;
+	height:37px;
+}
+.search_box input[type=text]
+{
+	width:400px;
+	border:none;
+	float:left;
+	height:94%;
+	padding-left:10px;
+	font-size:17px;
+	
+}
+.search_box button
+{
+	width:70px;
+	float:right;
+	height:100%;
+	margin-bottom:0;
+	background:#000 !important;
+	border:none;
+}
+.quote_button
+{
+	padding-left:20px;
+}
+.quote_button button
+{
+	height:38px;
+	background:#f00605;
+	border:none;
+	color:white;
+	box-shadow:0 2px 1px 0 #4c8a47;
+}
+#side_menu
+{
+	padding-left:50px;
+	z-index:1;
+}
+.slider
+{
+	width:900px;
+	float:right;
+}
+#navigate
+{
+	padding-left:0px;
+	background:white;
+	height:42px;
+	margin:0;
+}
+#navigate table
+{	color:grey;
+	width:100%;
+	text-align:center;
+	bottom:0;
+	margin:0;
+	height:100%;
+}
+
+
+#navigate table td > *
+{
+    padding-top: 10px;
+    border-right: 0px solid #f3f3f3;
+    padding-right: 0px;
+}
+.navigate_div
+{
+	border-bottom:3px solid #5bb7b7;
+}
+
+.navigate_div_Actv{
+	background:#00a4a4;
+	color:#fff;
+}
+
+.items
+{
+	padding-right:20px;
+	margin-top:10px;
+	width:900px;
+	float:right;
+	height:530px;
+	
+}
+.item_table
+{
+	height:100%;
+	background:white;
+	border-collapse:collapse;
+	top:0;
+	bottom:0;
+	box-shadow:0 1px 8px 2px #d4d0d0;
+	margin-bottom:20px;
+}
+.item_table p
+{
+	font-family:open_sansregular;
+	font-size:20px;
+	color:#333;
+	line-height: 25px;
+	padding-left:10px;
+}
+.items #side_image
+{
+	padding-top:20px;
+	padding-left:20px;
+	width:250px;
+	height:100%;
+	float:left;
+	position:relative;
+	z-index: 10;
+	top:0;
+}
+.rest_image
+{
+	float:right;
+	width:100%;
+	top:0;
+}
+.link_image1 img
+{
+	width:300px;
+	height:250px;
+}
+.link_image3 img
+{
+	height:150px;
+	width:auto;
+	width:200px;
+}
+#imc
+{
+	top:80%;
+	background:#34637b;
+	
+	opacity: 0.7;
+	color:white;
+	text-align:center;
+}
+#imc h2
+{
+	font-size:18px;
+	font-weight:normal;
+	width:100%;
+	text-align:center;
+}
+#company_slider
+{
+	padding-right:50px;
+	margin-top:30px;
+	width:1200px;
+	float:right;
+	height:auto;
+	margin-bottom:50px;
+}
+#company_slider h3
+{
+	text-align:center;
+	font-size:32px;
+	font-weight:;
+	text-shadow:1px 1px 1px grey;
+	color:grey;
+}
+#company_slider img
+{
+	height:150px !important;
+	width:auto;
+}
+.form_content
+{
+	width:50%;
+	height:80px;
+	padding:28px;
+}
+#form_slider
+{
+	background:white;
+}
+.form_table
+{
+	width:100%;
+}
+#img_form img
+{
+
+	height:40px !important;
+}
+
+.rigtF i {
+	font-size:20px;
+	margin-right:30px;
+}
+.fa-facebook:hover{
+	color:#4e71a8;
+	font-size:20px;
+}
+.fa-twitter:hover{
+	color:#1cb7eb;
+	font-size:20px;
+}
+.fa-youtube:hover{
+	color:#ca3737;
+	font-size:20px;
+}
+.fa-google:hover{
+	color:#e3411f;
+	font-size:20px;
+}
+
+.sugst > div{
+	width: 381px;
+}
+
+.navTrackr li:before {
+    border-color: transparent #f3f3f3;
+    border-style: solid;
+	border-width: 16px 0 17px 21px;
+    content: "";
+    line-height: 0;
+    position: absolute;
+    right: -25px;
+    top: 0px;
+    z-index: 1;
+}
+
+
+
+.navTrackr li:after {
+    border-color: transparent #fff;
+    border-style: solid;
+    border-width: 16px 0 16px 14px;
+    content: "";
+    line-height: 0;
+    margin-left: 18px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
