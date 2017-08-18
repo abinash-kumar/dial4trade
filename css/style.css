@@ -238,7 +238,7 @@ border-top: 1px solid #fff;
 }
 
 .bigDiv{
-	width:800px;
+	width:60%;
 	height:485px;
 	background:#fff;
 	padding:15px;
@@ -273,7 +273,7 @@ border-top: 1px solid #fff;
 
 
 .smlDiv{
-    width: 379px;
+    width: 30%;
     margin-left: 20px;
     height: 485px;
 	background:#fff;
@@ -392,7 +392,7 @@ p{
 .TopFrm h3{
 	font-size:17px;
 	font-weight:bold;
-	width:100%;
+	width:90%;
 	background:#f6f6f6;
 	padding:0px 20px;
 	margin:0;
@@ -414,6 +414,7 @@ p{
 }
 
 .srch {
+	left: -20px;
 	border: 1px solid #ddd;
     color: #444;
     float: left;
